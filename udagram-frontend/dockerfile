@@ -12,7 +12,7 @@ RUN npm ci
 COPY . .
 FROM node:16.0.0
 RUN npm install -g cordova ionic
-RUN ionic init
+RUN ionic init --force
 RUN ionic build
 ### Run 
 FROM nginx:alpine
