@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 16
+  - 20
 
 services:
   - docker
@@ -12,7 +12,10 @@ install:
 # Scripts to be run such as tests
 before_script:
   - echo "no tests"
+  - npm i -g npm@10
+  - npm ci 
   - npm install -g ionic
+
 
 script:
   - docker --version # print the version for logging
