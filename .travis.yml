@@ -3,8 +3,6 @@ node_js:
   - 20.13.1
 npm:
   - 10.5.2
-nvm:
-  - 20.13.1
   
 services:
   - docker
