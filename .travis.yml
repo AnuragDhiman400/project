@@ -12,7 +12,6 @@ install:
 # Scripts to be run such as tests
 before_script:
   - echo "no tests"
-  - npm i -g npm@10
   - npm ci 
   - npm install -g ionic
 
