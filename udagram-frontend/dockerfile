@@ -10,10 +10,7 @@ RUN npm ci
 
 ## Bundle app source
 COPY . .
-FROM node:16.0.0
-RUN npm install -g cordova ionic
-RUN ionic init --force
-RUN ionic build
+
 ### Run 
 FROM nginx:alpine
 #COPY www /usr/share/nginx/html
