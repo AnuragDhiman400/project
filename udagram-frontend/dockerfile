@@ -1,5 +1,5 @@
 ### Build
-FROM beevelop/ionic:latest AS ionic
+FROM --platform=linux/amd64 beevelop/ionic:latest AS ionic
 ## Create app directory
 WORKDIR /usr/src/app
 ## Install app dependencies
@@ -11,6 +11,7 @@ RUN npm ci
 ## Bundle app source
 COPY . .
 FROM node:16.0.0
+RUN npm install -g cordova ionic
 RUN ionic build
 ### Run 
 FROM nginx:alpine
