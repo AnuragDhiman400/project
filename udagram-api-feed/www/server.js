@@ -22,6 +22,11 @@ const model_index_1 = require("./controllers/v0/model.index");
 (() => __awaiter(void 0, void 0, void 0, function* () {
     yield sequelize_1.sequelize.addModels(model_index_1.V0_FEED_MODELS);
     console.debug("Initialize database connection...");
+    console.log("database--->" + config_1.config.database);
+    console.log("dialect--->" + config_1.config.dialect);
+    console.log("host--->" + config_1.config.host);
+    console.log("username--->" + config_1.config.username);
+    console.log("password--->" + config_1.config.password);
     yield sequelize_1.sequelize.sync();
     const app = express_1.default();
     const port = process.env.PORT || 8080;
