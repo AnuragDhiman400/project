@@ -9,6 +9,12 @@ exports.sequelize = new sequelize_typescript_1.Sequelize({
     'database': config_1.config.database,
     'host': config_1.config.host,
     'dialect': config_1.config.dialect,
-    'storage': ':memory:'
+    'storage': ':memory:',
+    dialectOptions: {
+        "ssl": {
+            "require": true,
+            rejectUnauthorized: false
+        }
+    }
 });
 //# sourceMappingURL=sequelize.js.map
