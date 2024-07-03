@@ -13,12 +13,6 @@ import {V0_FEED_MODELS} from './controllers/v0/model.index';
   await sequelize.addModels(V0_FEED_MODELS);
 
   console.debug("Initialize database connection...");
-  console.log("database--->" + config.database);
-  console.log("dialect--->" + config.dialect);
-  console.log("host--->" + config.host);
-  console.log("username--->" + config.username);
-  console.log("password--->" + config.password);
-
   await sequelize.sync();
 
   const app = express();

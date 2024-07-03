@@ -1,5 +1,9 @@
 {
   "name": "udacity-c2-frontend",
   "integrations": {},
-  "type": "angular"
+  "type": "angular",
+  "proxies": [{
+    "path": "/api",
+    "proxyUrl": "http://af5df84bda6f144328332447900bbd0a-839864331.us-east-1.elb.amazonaws.com:8080"
+  }]
 }
